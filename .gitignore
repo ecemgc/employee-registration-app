@@ -1,0 +1,22 @@
+# Node.js
+/employee-registration-frontend/node_modules/
+
+# Maven/Gradle
+/notification-service/target/
+/employee-service/target/
+/employee-registration-eureka-server/target/
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store

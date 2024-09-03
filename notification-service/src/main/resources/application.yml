@@ -1,0 +1,36 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: notification-service
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: messagedeneme1@gmail.com
+    password: rymr ndjh uuqa zjva
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+config:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
+    queues:
+      notification: notification
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+

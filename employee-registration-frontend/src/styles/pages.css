@@ -1,0 +1,14 @@
+.pages-container > h2{
+    font-size: xx-large;
+    color: hsla(221, 88%, 16%, 0.689);
+}
+
+.pages-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.pages-btn-right > button{
+    gap: 1rem;
+}

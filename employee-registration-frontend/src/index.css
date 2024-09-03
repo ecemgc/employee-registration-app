@@ -1,0 +1,48 @@
+
+
+body, html{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    color: var(--fontColor);
+    font-family: Arial, sans-serif;
+}
+
+i{
+    text-decoration: none !important;
+}
+
+p {
+    margin: 1rem 0 !important;
+    line-height: 1.75;
+}
+
+.registration-container {
+    max-width: calc(1080px + 2rem);
+    margin: auto;
+    padding: 0 1rem;
+    display: block;
+}
+
+.section-lg{
+    padding: 4rem 0;
+
+}
+
+.section-m{
+  padding: 3rem 0;
+}
+
+.section-s{
+  padding: 1.5rem;
+}
+
+.section-xl{
+    padding: 6rem 0;
+}
+
+.header-space{
+    height: -2rem;
+}

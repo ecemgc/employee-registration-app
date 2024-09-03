@@ -1,0 +1,70 @@
+server:
+  port: 8080
+  forward-headers-strategy: framework
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  sql:
+    init:
+      mode: always
+  application:
+    name: employee-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/employee_registration
+    username: ecemgc
+    password: 1234
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+config:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
+    queues:
+      notification: notification
+
+jwt:
+  expiration: 10
+  secret: ecem
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  api-docs:
+    path: /api-docs
+
+services:
+  notification:
+    name: notification-client
+    url: http://localhost:8081
+
+appConfig:
+  isNotificationSync: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
+
+logging:
+  level:
+    root: info
+    io.github.ecemgc.employeeservice: debug
