@@ -36,14 +36,12 @@ const UpdateDepartment = () => {
       }, [selectedDepartment, setValue]);
 
       useEffect(() => {
-        console.log("update department:  ",isUpdateDepartmentSuccess);
         if (isUpdateDepartmentSuccess) {
           navigate("/departments");
         }
       }, [isUpdateDepartmentSuccess]);
 
       const onSubmit: SubmitHandler<InputProps> = (data:any) => {
-        console.log(data);
         dispatch({
             type: DepartmentSagaTypes.UPDATE,
             payload: {id: selectedDepartment?.id, data }

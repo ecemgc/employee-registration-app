@@ -9,7 +9,6 @@ export default function Layout() {
 
   useEffect(() => {
     const auth = localStorage.getItem("auth");
-    console.log("logged in", isLoggedIn);
     if (!isLoggedIn && !auth) {
       navigate("/login");
     }

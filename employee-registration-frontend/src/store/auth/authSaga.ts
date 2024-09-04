@@ -1,4 +1,3 @@
-// src/sagas/counterSaga.ts
 import { takeEvery, put, call } from "redux-saga/effects";
 import { AxiosResponse } from "axios";
 import axiosInstance from "../axiosConfig";
@@ -20,7 +19,6 @@ function* login(
     yield put(setLogin(response.data));
     toast.success("Login successful, redirecting to homepage");
   } catch (error: any) {
-    console.error("Error when login:", error);
     toast.error("Username or password incorrect");
   } finally {
     yield put(setIsLoginLoaded(false));

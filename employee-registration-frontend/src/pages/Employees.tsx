@@ -24,8 +24,6 @@ const Employees = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(responseGetEmployees?.content);
-
     dispatch({
       type: EmployeeSagaTypes.GET_ALL,
       payload: {

@@ -34,7 +34,6 @@ export default function Header(props: Props) {
   };
 
   const handleLogout = () => {
-    console.log("Logout clicked");
     dispatch(setLogout());
   };
   const handleNavigate = (path: string) => {

@@ -5,7 +5,6 @@ import { store } from "./store/store.ts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login.tsx";
 import Layout from "./pages/Layout.tsx";
-import Home from "./Home.tsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Departments from "./pages/Departments.tsx";
