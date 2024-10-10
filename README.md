@@ -33,3 +33,5 @@ The backend consists of two separate microservices:
 - **RabbitMQ**: A message broker used for inter-service communication.
 - **Eureka**: A service discovery tool used in microservices architecture.
 - **FeignClient**: A declarative web service client that simplifies HTTP API calls.
+
+
