@@ -13,7 +13,9 @@ import io.github.ecemgc.employeeservice.response.ResponseEmployee;
 import io.github.ecemgc.employeeservice.response.ResponsePage;
 import io.github.ecemgc.employeeservice.service.employee.intf.EmployeeService;
 import io.github.ecemgc.employeeservice.service.notification.NotificationService;
+import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -22,16 +24,23 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @Service
 @AllArgsConstructor
 @Transactional
+@Slf4j
 public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final DepartmentRepository departmentRepository;
     private final EmployeeMapper employeeMapper;
     private final PasswordEncoder passwordEncoder;
     private final NotificationService notificationService;
+
+    @PostConstruct
+    public void init() {
+        var pw = passwordEncoder.encode("12345678");
+        log.info("encoded pw={}", pw);
+    }
+
     @Override
     public void save(RequestCreateEmployee requestCreateEmployee) {
         Long departmentId = requestCreateEmployee.getDepartmentId();
