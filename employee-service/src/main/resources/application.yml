@@ -55,6 +55,7 @@ services:
 
 appConfig:
   isNotificationSync: true
+  uiHost: "http://213.250.150.88"
 
 feign:
   client:
