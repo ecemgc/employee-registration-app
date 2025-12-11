@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS employee_roles (
 INSERT INTO departments (id, name, description, created_at, updated_at) values (1, 'Management', 'Management Department', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT (id) DO NOTHING;
 INSERT INTO departments (id, name, description, created_at, updated_at) values (2, 'HR', 'Human Resources', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO employees (id, first_name, last_name, email, password, phone, address, image_url, start_date, end_date, created_at, updated_at, is_active, is_deleted, department_id) values (1, 'Ecem', 'Günenç', 'ecemgunenc@outlook.com', '$2a$10$kQAOqBWIJ1FsObGM374lSuUUycfGW.vysNsPz73QOJqiCot7KSMR6', '05384180214', 'İstanbul', null, CURRENT_TIMESTAMP, null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, true, false, 1) ON CONFLICT (id) DO NOTHING;
+INSERT INTO employees (id, first_name, last_name, email, password, phone, address, image_url, start_date, end_date, created_at, updated_at, is_active, is_deleted, department_id) values (1, 'Ecem', 'Günenç', 'ecemgunenc@outlook.com', '$2a$10$OAKr0h0FBvdRKXRMmap4yuJgZNb2vAxthTs5Syr.Kk1gi1mgLjR1K', '05384180214', 'İstanbul', null, CURRENT_TIMESTAMP, null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, true, false, 1) ON CONFLICT (id) DO NOTHING;
 
 INSERT INTO roles (id, name) VALUES (1, 'ADMIN') ON CONFLICT (id) DO NOTHING;
 
