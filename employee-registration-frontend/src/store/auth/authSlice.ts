@@ -32,9 +32,8 @@ export const authSlice = createSlice({
     setIsLoginLoaded: (state, action: PayloadAction<boolean>) => {
       state.isLoginLoaded = action.payload;
     },
-    setLogout: (state) => {
+    setLogout: () => {
       localStorage.removeItem("auth");
-      state = initialState;
       window.location.href = "/login";
     },
   },

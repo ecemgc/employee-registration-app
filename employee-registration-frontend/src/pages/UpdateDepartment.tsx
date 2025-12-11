@@ -3,7 +3,6 @@ import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Grid, TextField } from "@mui/material";
 import { useEffect } from "react";
-import { setIsUpdateDepartmentSuccess } from "../store/department/departmentSlice";
 import { DepartmentSagaTypes } from "../store/department/departmentSaga";
 
 type InputProps = {

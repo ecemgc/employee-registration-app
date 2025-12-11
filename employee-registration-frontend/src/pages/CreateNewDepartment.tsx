@@ -15,7 +15,7 @@ type InputProps = {
 export default function CreateNewDepartment() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { isCreateDepartmentLoading, isCreateDepartmentSuccess } =
+  const { isCreateDepartmentSuccess } =
     useAppSelector((state) => state.department);
   const {
     control,
