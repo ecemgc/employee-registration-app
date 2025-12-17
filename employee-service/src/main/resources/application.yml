@@ -12,7 +12,7 @@ spring:
   application:
     name: employee-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/employee_registration
+    url: jdbc:postgresql://postgres:5432/employee_registration
     username: ecemgc
     password: 1234
     driverClassName: org.postgresql.Driver
@@ -25,7 +25,7 @@ spring:
 
 config:
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: rabbitmq
     password: rabbitmq
@@ -39,7 +39,7 @@ jwt:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
 
 springdoc:
   swagger-ui:
@@ -50,8 +50,8 @@ springdoc:
 
 services:
   notification:
-    name: notification-client
-    url: http://localhost:8081
+    name: notification-service
+    url: http://notification-service:8081
 
 appConfig:
   isNotificationSync: true
